@@ -38,6 +38,13 @@ public class Controller {
             return new ResponseEntity<>(map, HttpStatus.OK);
     }
 
+    @GetMapping("close")
+    public ResponseEntity<Map> close() {
+        Map<String, String> map = new HashMap<>();
+        map.put("status","closed");
+        return new ResponseEntity<>(map, HttpStatus.OK);
+    }
+
 
 
 
