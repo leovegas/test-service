@@ -28,6 +28,11 @@ public class Controller {
         if (bank!=null) return "ok";
         return "not ok";
     }
+    @GetMapping("info")
+    public String info() {
+        if (bank!=null) return "ok";
+        return "not ok";
+    }
 
 
     static class Ob {
