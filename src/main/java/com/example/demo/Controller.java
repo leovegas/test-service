@@ -32,9 +32,10 @@ public class Controller {
         return "not ok";
     }
     @GetMapping("info")
-    public ResponseEntity<Map> info() {
+    public ResponseEntity<Map<String,String>> info() {
             Map<String, String> map = new HashMap<>();
             map.put("status","clean");
+            map.put("name","test");
             return new ResponseEntity<>(map, HttpStatus.OK);
     }
 
