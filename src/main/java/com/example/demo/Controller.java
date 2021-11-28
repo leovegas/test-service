@@ -44,6 +44,7 @@ public class Controller {
         map.put("status","closed");
         map.put("quantity","44");
         map.put("location","ny");
+        map.put("market","test");
 
         return new ResponseEntity<>(map, HttpStatus.OK);
     }
