@@ -1,10 +1,13 @@
 package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.Serializable;
+import java.util.HashMap;
 import java.util.Map;
 
 @RestController
@@ -29,10 +32,13 @@ public class Controller {
         return "not ok";
     }
     @GetMapping("info")
-    public String info() {
-        if (bank!=null) return "ok";
-        return "not ok";
+    public ResponseEntity<Map> info() {
+            Map<String, String> map = new HashMap<>();
+            map.put("status","clean");
+            return new ResponseEntity<>(map, HttpStatus.OK);
     }
+
+
 
 
     static class Ob {
